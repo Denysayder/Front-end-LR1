@@ -1,139 +1,16 @@
-table{
-	width: 100%;
-	border-collapse:collapse;
-	border-spacing:0;
-	height: auto;
-}
-table,table td, table th {
-	border: 1px solid #595959;
-}
-table td,table th {
-	padding: 3px;
-	width: 30px;
-	height: 35px;
-}
-
-.bg-1{
-    background-color: #278f8f;
-}
-.bg-2{
-    background-color: #f5f527;
-}
-.bg-1:hover{
-    background-color: #f5f527;
-}
-.bg-2:hover{
-    background-color: #278f8f;
-}
-
-.clock-wrapper{
-    margin-top: 50px;
+.buttons-container{
     display: flex;
-    justify-content: space-around;
-}
-.clock-position{
-    background-color: #F2F2F2;
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    position: relative;
 }
 
-.clock-position .point{
-    background-color: red;
-    width: 12px;
-    height: 12px;
-    border: 1px solid black;
-    border-radius: 100px;
-    position: absolute;
-}
-.clock-position .point-top{
-    top: 10px;
-    left: 94px;
-}
-.clock-position .point-right{
-    top: 94px;
-    right: 10px;
-}
-.clock-position .point-bottom{
-    bottom: 10px;
-    left: 94px;
-}
-.clock-position .point-left{
-    left: 10px;
-    top: 94px;
+.buttons-container button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #34e5eb;
+    border: 0;
+    cursor: pointer;
 }
 
-.clock-position .arrow_long {
-    background-color: black;
-    width: 5px;
-    height: 100px;
-    position: absolute;
-    top: 16px;
-    left: 98.5px;
-}
-.clock-position .arrow_short {
-    background-color: black;
-    width: 80px;
-    height: 5px;
-    position: absolute;
-    top: 98.5px;
-    left: 85px;
-}
-
-
-.clock-transform{
-    background-color: #F2F2F2;
-    width: 200px;
-    height: 200px;
-    border-radius: 20px;
-    position: relative;
-}
-
-.clock-transform .point{
-    background-color: red;
-    width: 12px;
-    height: 12px;
-    border: 1px solid black;
-    border-radius: 100px;
-    position: absolute;
-}
-.clock-transform .point-top{
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.clock-transform .point-right{
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-}
-.clock-transform .point-bottom{
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.clock-transform .point-left{
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-}
-
-.clock-transform .arrow_long {
-    background-color: black;
-    width: 5px;
-    height: 100px;
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.clock-transform .arrow_short {
-    background-color: black;
-    width: 80px;
-    height: 5px;
-    position: absolute;
-    top: 50%;
-    left: 85px;
-    transform: translateY(-50%);
+a + a{
+    margin-left: 20px;
 }
