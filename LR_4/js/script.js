@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var element1 = document.getElementById("element1");
-    var element2 = document.querySelector(".element2");
+    let element1 = document.getElementById("element1");
+    let element2 = document.querySelector(".element2");
 
-    var clickState1 = false;
-    var clickState2 = false;
+    let clickState1 = false;
+    let clickState2 = false;
 
     element1.addEventListener("click", function () {
         clickState1 = !clickState1;
@@ -30,22 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("addBtn").addEventListener("click", function () {
-        var input = document.createElement('input');
+        let input = document.createElement('input');
         input.type = 'file';
 
         input.addEventListener('change', function (event) {
-            var file = event.target.files[0];
+            let file = event.target.files[0];
 
             if (file) {
-                var reader = new FileReader();
+                let reader = new FileReader();
 
                 reader.onload = function (readerEvent) {
-                    var newImage = new Image();
+                    let newImage = new Image();
                     newImage.src = readerEvent.target.result;
                     newImage.id = 'cityImage';
                     newImage.alt = 'Uploaded Image';
 
-                    var existingImage = document.getElementById('cityImage');
+                    let existingImage = document.getElementById('cityImage');
                     existingImage.parentNode.replaceChild(newImage, existingImage);
                 };
 
@@ -57,19 +57,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("increaseBtn").addEventListener("click", function () {
-        var image = document.getElementById("cityImage");
-        var currentSize = parseInt(window.getComputedStyle(image).getPropertyValue("width"));
+        let image = document.getElementById("cityImage");
+        let currentSize = parseInt(window.getComputedStyle(image).getPropertyValue("width"));
         image.style.width = (currentSize * 1.2) + "px";
     });
 
     document.getElementById("decreaseBtn").addEventListener("click", function () {
-        var image = document.getElementById("cityImage");
-        var currentSize = parseInt(window.getComputedStyle(image).getPropertyValue("width"));
+        let image = document.getElementById("cityImage");
+        let currentSize = parseInt(window.getComputedStyle(image).getPropertyValue("width"));
         image.style.width = (currentSize * 0.8) + "px";
     });
 
     document.getElementById("deleteBtn").addEventListener("click", function () {
-        var image = document.getElementById("cityImage");
+        let image = document.getElementById("cityImage");
         image.style.display = "none";
     });
 });
